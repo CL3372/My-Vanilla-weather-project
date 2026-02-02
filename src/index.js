@@ -15,21 +15,25 @@ function refreshWeather(response) {
   let timeElement = document.querySelector("#time");
   let date = new Date(response.data.time * 1000);
 
-  console.log(response.data.condition.description);
-
+  let iconElement = document.querySelector("#icon");
+  
   cityElement.innerHTML = response.data.city;
 
-  timeElement.innerHTML = formatDate(date);
-
+ timeElement.innerHTML = formatDate(date);
   descriptionElement.innerHTML = response.data.condition.description;
   humidityElement.innerHTML = `${response.data.temperature.humidity}%`;
   windspeedElement.innerHTML = `${response.data.wind.speed}km/h`;
   temperatureElement.innerHTML = Math.round(temperature);
-}
+icon.innerHTML = `<img src="${response.data.condition.icon_url}" class="weather-app-icon" />;
+
 
 function formatDate(date) {
-  let minutes = date.getMinutes();
-  let hours = date.getHours();
+  if (!(date instanceof Date)) {
+    throw new Error('Invalid date object');
+  }
+
+  let minutes = date.getMinutes().toString().padStart(2, '0');
+  let hours = date.getHours().toString().padStart(2, '0');
 
   let days = [
     "Sunday",
@@ -40,14 +44,16 @@ function formatDate(date) {
     "Friday",
     "Saturday",
   ];
+
   let day = days[date.getDay()];
 
-  if (minutes < 10) {
-    minutes = `0${minutes}`;
-  }
-
-  return `${day} ${hours}:${minutes}`;
+  return ${day}, ${hours}:${minutes};
 }
+
+if (minutes < 10) { 
+    minutes = 0${minutes};
+}
+
 
 function searchCity(city) {
   let apiKey = "aa9340df384978aa7t1a53a8fabcc2o1";

@@ -45,7 +45,6 @@ main {
 
 .weather-app-information {
   display: flex;
-  justify-content: space-between;
 }
 
 .weather-app-city {
@@ -65,22 +64,25 @@ main {
 
 .weather-app-temperature-container {
   display: flex;
+  justify-content: space-around;
 }
 
 .weather-app-icon {
-  font-size: 44px;
-  margin-top: 25px;
-  margin-left: 15px;
+  font-size: 50px;
+  margin-top: 22px;
+  width: 88px;
+  height: 88px;
 }
 
 .weather-app-temp {
-  font-size: 90px;
+  font-size: 80px;
+  line-height: 88px;
   font-weight: bold;
 }
 
 .weather-app-unit {
-  margin-top: 30px;
-  font-size: 30px;
+  margin-top: 20px;
+  font-size: 50px;
   font-weight: bold;
 }
 

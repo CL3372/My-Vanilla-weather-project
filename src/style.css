@@ -11,14 +11,14 @@ a {
   background: white;
   max-width: 600px;
   margin: 40px auto;
-  box-shadow: 0 40px 60px rgba(80, 60, 80, 0.1);
+  box-shadow: 0 80px 90px rgba(109, 62, 109, 0.1);
   border-radius: 20px;
-  padding: 60px;
+  padding: 40px;
 }
 
 header {
   border-bottom: 1px solid #f9f7fe;
-  padding: 0 0 60px;
+  padding: 0 0 20px;
 }
 
 .search-form-input {
@@ -66,7 +66,6 @@ main {
 
 .weather-app-temperature-container {
   display: flex;
-  justify-content: space-between;
 }
 
 .weather-app-icon {
@@ -75,14 +74,14 @@ main {
 }
 
 .weather-app-temp {
-  font-size: 60px;
+  font-size: 88px;
   margin-left: 10px;
 
   font-weight: bold;
 }
 
 .weather-app-unit {
-  margin-top: 6px;
+  margin-top: 20px;
   font-size: 28px;
   font-weight: bold;
 }
